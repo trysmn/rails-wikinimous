@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+require 'faker'
+
+array_of_articles = []
+
+10.times do |title,content|
+  array_of_articles << { title: "#{Faker::RickAndMorty.character}", content: Faker::RickAndMorty.quote }
+end
